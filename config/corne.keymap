@@ -38,7 +38,7 @@
 &none  &none  &none  &none  &none   &none    &kp L         &kp R         &kp C             &kp O              &kp S  &none
 &none  &none  &none  &none  &none   &none    &kp N         &kp B         &kp LEFT_BRACKET  &kp Q              &kp I  &trans
 &none  &none  &none  &none  &none   &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &kp RIGHT_BRACKET  &kp E  &none
-                     &none  &trans  &none    &kp RET       &bt BT_CLR    &trans
+                     &none  &trans  &none    &kp RET       &none         &bt BT_CLR
             >;
         };
 
