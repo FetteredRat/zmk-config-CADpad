@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2.3.4  # Specify exact version
+        uses: actions/checkout@v4  # Specify exact version
 
       # Cache dependencies
       - name: Cache dependencies
