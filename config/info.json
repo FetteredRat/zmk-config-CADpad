@@ -1,10 +1,9 @@
 {
-  "keyboard_name": "CADpad",
-  "manufacturer": "Custom",
-  "url": "https://github.com/FetteredRat/zmk-config-CADpad",
-  "maintainer": "FetteredRat",
+  "id": "cadpad",
+  "name": "cadpad",
   "layouts": {
-    "LAYOUT": {
+    "default_layout": {
+      "name": "default_layout",
       "layout": [
         // Row 0 (5 keys)
         {"label": "7", "x": 0, "y": 0, "w": 1, "h": 1},
