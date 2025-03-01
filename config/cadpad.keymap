@@ -29,7 +29,7 @@
 
         layer_2 {
             bindings = <
-&bt BT_CLR_ALL  &trans        &trans        &trans 0  &soft_off
+&bt BT_CLR_ALL  &trans        &trans        &trans  &soft_off
 &trans          &trans        &trans        &trans    &trans
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &trans    &sys_reset
 &kp BACKSPACE   &trans        &trans
