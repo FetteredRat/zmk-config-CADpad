@@ -21,6 +21,6 @@ jobs:
         if: failure()
         run: cat build.log
 
-        name: Build and capture output
-  run: |
-    ./build.sh 2>&1 | tee build.log
+      - name: Build and capture output
+        run: |
+        ./build.sh 2>&1 | tee build.log
