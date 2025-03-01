@@ -46,7 +46,7 @@ jobs:
       # Improved error handling
       - name: Archive build logs
         if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build-logs
           path: build.log
