@@ -6,7 +6,6 @@
     restore-keys: |
       ${{ runner.os }}-build-cache-zephyr-
   continue-on-error: true
-
 name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
