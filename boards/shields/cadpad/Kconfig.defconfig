@@ -1,4 +1,4 @@
-if ZMK_KEYBOARD_CADPAD
+if ZMK_KEYBOARD_cadpad
 
 config ZMK_KEYBOARD_NAME
     default "cadpad"
