@@ -25,7 +25,7 @@
 
         layer_2 { // Layer 2: System and Bluetooth Functions
             bindings = <
-                &trans &trans        &trans    &bt BT_SEL 0 &bt BT_SEL 1
+                &trans &trans &trans &trans 0 &trans
                 &bt BT_SEL 2 &kp F1     &kp F2        &kp F3       &trans
                 &kp N1     &kp N2      &kp N3        &kp EQUAL    &trans
                 &trans        &mo 1       &mo 2         &trans       &trans
