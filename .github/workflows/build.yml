@@ -6,7 +6,16 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4  # Specify exact version
+
+      # Cache dependencies
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-build-${{ hashFiles('**/build.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: Print environment variables
         run: printenv
@@ -20,3 +29,11 @@ jobs:
       - name: Capture build logs
         if: failure()
         run: cat build.log
+
+      # Improved error handling
+      - name: Archive build logs
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-logs
+          path: build.log
