@@ -1,11 +1,3 @@
-- name: Restore Zephyr modules cache
-  uses: actions/cache@v2
-  with:
-    path: /tmp/zmk-config/modules/
-    key: ${{ runner.os }}-build-cache-zephyr-${{ hashFiles('**/zephyr/*') }}
-    restore-keys: |
-      ${{ runner.os }}-build-cache-zephyr-
-  continue-on-error: true
 name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
