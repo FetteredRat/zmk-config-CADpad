@@ -1,7 +1,26 @@
-name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
-
+env:
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print environment variables
+        run: printenv
+
+      - name: Run build script
+        run: |
+          echo "Building..."
+          ./build.sh 2>&1 | tee build.log
+        continue-on-error: true
+
+      - name: Capture build logs
+        if: failure()
+        run: cat build.log
+
+        name: Build and capture output
+  run: |
+    ./build.sh 2>&1 | tee build.log
