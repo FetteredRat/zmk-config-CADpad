@@ -2,7 +2,7 @@
   "id": "cadpad",
   "name": "cadpad",
   "layouts": {
-    "LAYOUT": {
+    "LAYOUT_ortho_5x4": {
       "layout": [
         { "row": 0, "col":  0, "x":  0, "y": 0 },
         { "row": 0, "col":  1, "x":  1, "y": 0 },
